@@ -1,4 +1,5 @@
 Algoritmo TiendaVirtual
+	//Definicion y asignacion de variables
 	Definir opcion como entero;
 	Definir i Como Entero;
 	Definir OpCarrito, producto1, producto2, producto3, producto4, producto5, carrito, respuesta como texto;
@@ -20,8 +21,9 @@ Algoritmo TiendaVirtual
 	precios[3] =0;
 	precios[4] =0;
 
-
+//Bloque de codigo principal con bucle
 	Repetir
+		//impresion del menu
 		Escribir "|| Catalogo ||";
 		Escribir "||0. Carrito ||";
 		Escribir "";
@@ -36,11 +38,14 @@ Algoritmo TiendaVirtual
 		producto5 = "5.Collar de flor";
 		Escribir producto5;
 		Leer opcion;
+		//acciones segun la opcion elegida por el ususario
 		Segun opcion Hacer
 			caso 0:
+				//Mostrar carrito con sus productos y total de sus precios. 
+				//Por si el carrito esta vacio arrojar error y avisar
 				Limpiar Pantalla;
 				si precios[0] = 0 Entonces
-					Escribir "Error carrito vacio, porfavor reinicia el programa o a�ade un producto";
+					Escribir "Error carrito vacio, porfavor reinicia el programa o añade un producto";
 				FinSi
 				para it = 0 Hasta i-1 Hacer
 					Escribir carrito[it];
@@ -55,6 +60,7 @@ Algoritmo TiendaVirtual
 				FinPara
 				Escribir "";
 				Escribir "El total del carrito es: " + ConvertirATexto(total);
+				//Proceso de eliminacion de un producto del carrito
 				Escribir "";
 				Escribir Sin Saltar "Quieres eliminar un producto de tu carrito?(si/no): ";
 				Leer respuesta;
@@ -72,14 +78,16 @@ Algoritmo TiendaVirtual
 					
 				FinSi
 				
+				//Apartir del caso se nos da la informacion del producto y la opcion de añadir al carrito
+				//funcion de retroceder aun no existente SJKJKASJKJKSA
 			caso 1:
 				Limpiar Pantalla;
-				Escribir "�� producto ��";
+				Escribir "°° Guantes de calavera °°";
 				Escribir "";
 				Escribir "Precio:15000 ";
-				Escribir "A�adir al carrito";
+				Escribir "Añadir al carrito";
 				Leer OpCarrito;
-				si OpCarrito = "a�adir" Entonces
+				si OpCarrito = "añadir" Entonces
 					precio1 = 15000;
 					carrito[i] = producto1;					
 					precios[i] = precio1;
@@ -90,12 +98,12 @@ Algoritmo TiendaVirtual
 				
 			caso 2:
 				Limpiar Pantalla;
-				Escribir "�� producto ��";
+				Escribir "°° producto °°";
 				Escribir "";
 				Escribir "Precio:45000 ";
-				Escribir "A�adir al carrito";
+				Escribir "Añadir al carrito";
 				Leer OpCarrito;
-				si OpCarrito = "a�adir" Entonces
+				si OpCarrito = "añadir" Entonces
 					precio2 = 45000;
 					carrito[i] = producto2;					
 					precios[i] = precio2;
@@ -106,12 +114,12 @@ Algoritmo TiendaVirtual
 				
 			caso 3:
 				Limpiar Pantalla;
-				Escribir "�� producto ��";
+				Escribir "°° producto °°";
 				Escribir "";
 				Escribir "Precio:28000 ";
-				Escribir "A�adir al carrito";
+				Escribir "Añadir al carrito";
 				Leer OpCarrito;
-				si OpCarrito = "a�adir" Entonces
+				si OpCarrito = "añadir" Entonces
 					precio3 = 28000;
 					carrito[i] = producto3;					
 					precios[i] = precio3;
@@ -122,12 +130,12 @@ Algoritmo TiendaVirtual
 				
 			caso 4:
 				Limpiar Pantalla;
-				Escribir "�� producto ��";
+				Escribir "°° producto °°";
 				Escribir "";
 				Escribir "Precio:7500 ";
-				Escribir "A�adir al carrito";
+				Escribir "Añadir al carrito";
 				Leer OpCarrito;
-				si OpCarrito = "a�adir" Entonces
+				si OpCarrito = "añadir" Entonces
 					precio4 = 7500;
 					carrito[i] = producto4;					
 					precios[i] = precio4;
@@ -138,12 +146,12 @@ Algoritmo TiendaVirtual
 				
 			caso 5:	
 				Limpiar Pantalla;
-				Escribir "�� producto ��";
+				Escribir "°° producto °°";
 				Escribir "";
 				Escribir "Precio:12400 ";
-				Escribir "A�adir al carrito";
+				Escribir "Añadir al carrito";
 				Leer OpCarrito;
-				si OpCarrito = "a�adir" Entonces
+				si OpCarrito = "añadir" Entonces
 					precio5 = 12400;
 					carrito[i] = producto5;					
 					precios[i] = precio5;
@@ -152,6 +160,7 @@ Algoritmo TiendaVirtual
 				FinSi
 				Limpiar Pantalla;
 				
+			// caso por si se elige una opcion inexistente
 			De Otro Modo:
 				Limpiar Pantalla;
 				Escribir "Producto inexistente, presiona una tecla para volver al catalogo...";
