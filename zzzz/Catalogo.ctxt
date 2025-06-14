@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Catalogo
+comment1.params=cato
+comment1.target=Catalogo(Carrito)
+comment2.params=
+comment2.target=java.lang.String[]\ getProducto()
+comment3.params=
+comment3.target=double[]\ getPrecio()
+comment4.params=
+comment4.target=void\ encabezado()
+comment5.params=
+comment5.target=void\ pdctList()
+comment6.params=opcion\ retroceso
+comment6.target=void\ infoProducto(int,\ boolean)
+comment7.params=retroceso
+comment7.target=boolean\ retroceso(boolean)
+comment8.params=retroceso\ accion
+comment8.target=boolean\ retroceso(boolean,\ java.lang.String)
+numComments=9

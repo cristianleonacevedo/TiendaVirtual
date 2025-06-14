@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Carrito
+comment1.params=product\ precio\ opcion\ accion
+comment1.target=void\ a\u00F1aCarrito(java.lang.String[],\ double[],\ int,\ java.lang.String)
+comment2.params=
+comment2.target=void\ pdctCarrito()
+numComments=3
